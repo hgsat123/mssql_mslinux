@@ -1,7 +1,7 @@
 ## These source code taken 
 # from https://github.com/twright-msft/mssql-node-docker-demo-app
 # For learninng purpose, to understand how MSSQL DB works
-# Satish Hegde
+# 
 FROM microsoft/mssql-server-linux:latest
 
 # Install node/npm

@@ -1,0 +1,30 @@
+# How to build a docker image for mssql ubuntu?
+ANS: Run the following command from the directory where Dockerfile is present
+
+# docker build -t <image-name:version> .
+
+# How to run this MSSQL DB container?
+ANS: Execute the following docker command with the specified ports, name of 
+the container & the container image with version.
+
+# docker run -e ACCEPT_EULA=Y -e SA_PASSWORD=Testuser900 -p 1433:1433 -p 8080:8080 --name mydb -d mssql:express
+
+# How to connect to MSSQL Container DB?
+ANS: Execute the following docker command with the name of the container. 
+
+# docker exec -it mydb bash
+
+# How to access the MSSQL DB inside the container?
+ANS: once your connect to the container, you will get the prompt. on the prompt
+exeute the following "sqlcmd" command to connect to MSSQL DB prompt
+
+# /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Testuser900 
+>
+
+# For webserver access
+
+From any windows host
+http:<IP-of-VM-where-container-running>:8080
+
+
+
